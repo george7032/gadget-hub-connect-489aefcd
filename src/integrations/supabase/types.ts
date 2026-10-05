@@ -14,75 +14,7 @@ export type Database = {
   }
   public: {
     Tables: {
-      admin_emails: {
-        Row: {
-          created_at: string
-          email: string
-        }
-        Insert: {
-          created_at?: string
-          email: string
-        }
-        Update: {
-          created_at?: string
-          email?: string
-        }
-        Relationships: []
-      }
-      products: {
-        Row: {
-          brand: string
-          category: string
-          created_at: string
-          description: string
-          id: string
-          image_url: string | null
-          in_stock: boolean
-          name: string
-          old_price: number | null
-          price: number
-          slug: string
-          sort_order: number
-          specs: Json
-          tags: string[]
-          updated_at: string
-        }
-        Insert: {
-          brand?: string
-          category: string
-          created_at?: string
-          description?: string
-          id?: string
-          image_url?: string | null
-          in_stock?: boolean
-          name: string
-          old_price?: number | null
-          price?: number
-          slug: string
-          sort_order?: number
-          specs?: Json
-          tags?: string[]
-          updated_at?: string
-        }
-        Update: {
-          brand?: string
-          category?: string
-          created_at?: string
-          description?: string
-          id?: string
-          image_url?: string | null
-          in_stock?: boolean
-          name?: string
-          old_price?: number | null
-          price?: number
-          slug?: string
-          sort_order?: number
-          specs?: Json
-          tags?: string[]
-          updated_at?: string
-        }
-        Relationships: []
-      }
+      [_ in never]: never
     }
     Views: {
       [_ in never]: never
